@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Andrew Fox's Portfolio</title>
+        <link rel="stylesheet" href="main.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <header>
+            <sheen class="left"></sheen>
+            <sheen class="middle"></sheen>
+            <sheen class="right"></sheen>
+            <large-text>
+                <key>A</key>
+                <key>N</key>
+                <key>D</key>
+                <key>R</key>
+                <key>E</key>
+                <key>W</key>
+            </large-text>
+            <large-text>
+                <key>&nbsp;</key>
+            </large-text>
+            <large-text>
+                <key>F</key>
+                <key>O</key>
+                <key>X</key>
+            </large-text>
+            <br>
+            <medium-text>
+                <key>C</key>
+                <key>Y</key>
+                <key>B</key>
+                <key>E</key>
+                <key>R</key>
+                <key>S</key>
+                <key>E</key>
+                <key>C</key>
+                <key>U</key>
+                <key>R</key>
+                <key>I</key>
+                <key>T</key>
+                <key>Y</key>
+            </medium-text>
+            <medium-text>
+                <key>&nbsp;</key>
+            </medium-text>
+            <medium-text>
+                <key>E</key>
+                <key>N</key>
+                <key>G</key>
+                <key>I</key>
+                <key>N</key>
+                <key>E</key>
+                <key>E</key>
+                <key>R</key>
+            </medium-text>
+            <br>
+            <word>
+                <a href="/resume.pdf">View Resume</a>
+            </word>
+        </header>
+        <plug-board>
+            <sheen></sheen>
+            <prong-board></prong-board>
+            <prong-board></prong-board>
+        </plug-board>
+        <border style="left:0">
+            <sheen style="width:60px;top:30%"></sheen>
+        </border>
+        <border style="right:0">
+            <sheen style="width:20px;top:-20%"></sheen>
+            <sheen style="width:80px;top:25%"></sheen>
+        </border>
+        <content>
+            <header-spacer></header-spacer>
+            <section-container class="5">
+                <section class="0">
+                    <plug>
+                        <prong style="margin-left:8px">
+                            <sheen></sheen>
+                        </prong>
+                        <prong style="margin-left:32px">
+                            <sheen></sheen>
+                        </prong>
+                        <sheen></sheen>
+                    </plug>
+                    <heading>
+                        <word>
+                            <key>L</key>
+                            <key>O</key>
+                            <key>R</key>
+                            <key>I</key>
+                            <key>C</key>
+                            <key>S</key>
+                            <key>C</key>
+                            <key>R</key>
+                            <key>I</key>
+                            <key>P</key>
+                            <key>T</key>
+                        </word>
+                    </heading>
+                    <section-content>
+                        <subheading><strong>Language</strong><text> - C and AT&T x86-64 Assembly (Apple Native)</text></subheading> <br>
+                        <subheading class="timeframe">&emsp;January 2023 : Present</subheading> <br>
+                        <blurb>LoricScript is a language entirely of my own design meant to become my primary language for future projects. The compiler is built in pure C with nothing beyond the standard libraries and the internal functions are implemented in the target assembly. The compiler is compiled using the Apple toolchain (Clang and LLDB) as opposed to the more common GNU toolchain (GCC and GDB). I am also building an accompanying unit testing framework, also out of C, to verify the integrity of the language's internal functions.</blurb>
+                    </section-content>
+                    <sample-box class="2">
+                        <code class="1">
+                            <line><keyword>bool</keyword> <accessor>?</accessor><variable>a</variable> <operator>=</operator> <primitive>true</primitive><operator>;</operator><br></line>
+                            <line><keyword>bool</keyword> <accessor>?</accessor><variable>b</variable> <operator>=</operator> <primitive>false</primitive><operator>;</operator><br></line>
+                            <line><accessor>?</accessor><variable>a</variable> <operator>&&</operator> <accessor>?</accessor><variable>b</variable> <comment>// and</comment><br></line>
+                            <line><accessor>?</accessor><variable>a</variable> <operator>||</operator> <accessor>?</accessor><variable>b</variable> <comment>// or</comment><br></line>
+                            <line><accessor>?</accessor><variable>a</variable> <operator>X|</operator> <accessor>?</accessor><variable>b</variable> <comment>// xor</comment><br></line>
+                            <line><accessor>?</accessor><variable>a</variable> <operator>!&</operator> <accessor>?</accessor><variable>b</variable> <comment>// nand</comment><br></line>
+                            <line><accessor>?</accessor><variable>a</variable> <operator>!|</operator> <accessor>?</accessor><variable>b</variable> <comment>// nor</comment><br></line>
+                            <line><accessor>?</accessor><variable>a</variable> <operator>!X</operator> <accessor>?</accessor><variable>b</variable> <comment>// xnor</comment><br></line>
+                            <line><br></line>
+                            <line><keyword>ratio</keyword> <accessor>?</accessor><variable>foo</variable> <operator>=</operator> <primitive>3</primitive> <operator>-/-</operator> <primitive>7</primitive><operator>;</operator><br></line>
+                            <line><keyword>ratio</keyword> <accessor>?</accessor><variable>bar</variable> <operator>=</operator> <primitive>2</primitive> <operator>-/-</operator> <primitive>12</primitive><operator>;</operator><br></line>
+                            <line><keyword>int</keyword> <accessor>?</accessor><variable>baz</variable> <operator>=</operator> <primitive>2</primitive><operator>;</operator><br></line>
+                            <line><keyword>ratio</keyword> <accessor>?</accessor><variable>qux</variable> <operator>=</operator> <operator>(</operator><accessor>?</accessor><variable>foo</variable> <operator>+</operator> <accessor>?</accessor><variable>bar</variable><operator>)</operator> <operator>*</operator> <accessor>?</accessor><variable>baz</variable><operator>;</operator><br></line>
+                            <line><comment>/* qux = 25 -/- 12 */</comment><br></line>
+                        </code>
+                        <code class="2">
+                            <line><keyword>leaq</keyword> <variable>__h_0_a</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b00100001</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__set</variable><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_b</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b00100000</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__set</variable><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_a</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_b</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__and</variable><br></line>
+                            <line><comment>// and</comment><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_a</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_b</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__or</variable><br></line>
+                            <line><comment>// or</comment><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_a</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_b</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__xor</variable><br></line>
+                            <line><comment>// xor</comment><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_a</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_b</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__and</variable><br></line>
+                            <line><keyword>call</keyword> <variable>__not</variable><br></line>
+                            <line><comment>// nand</comment><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_a</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_b</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__or</variable><br></line>
+                            <line><keyword>call</keyword> <variable>__not</variable><br></line>
+                            <line><comment>// nor</comment><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_a</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_b</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__xor</variable><br></line>
+                            <line><keyword>call</keyword> <variable>__not</variable><br></line>
+                            <line><comment>// xnor</comment><br></line>
+                            <line><br></line>
+                            <line><keyword>movq</keyword> <primitive>$3</primitive><operator>,</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b00000100</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>movq</keyword> <primitive>$7</primitive><operator>,</operator> <accessor>%rsi</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b00000100</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__ratio</variable><br></line>
+                            <line><keyword>call</keyword> <variable>__swap</variable><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_foo</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__set</variable><br></line>
+                            <line><keyword>movq</keyword> <primitive>$2</primitive><operator>,</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b00000100</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>movq</keyword> <primitive>$12</primitive><operator>,</operator> <accessor>%rsi</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b00000100</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__ratio</variable><br></line>
+                            <line><keyword>call</keyword> <variable>__swap</variable><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_bar</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__set</variable><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_baz</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>movq</keyword> <primitive>$2</primitive><operator>,</operator> <accessor>%rsi</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b00000100</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__set</variable><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_foo</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_bar</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rsi</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__add</variable><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_baz</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rsi</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dl</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__dot</variable><br></line>
+                            <line><keyword>call</keyword> <variable>__swap</variable><br></line>
+                            <line><keyword>leaq</keyword> <variable>__h_0_qux</variable><operator>(</operator><accessor>%rip</accessor><operator>),</operator> <accessor>%rax</accessor><br></line>
+                            <line><keyword>movb</keyword> <primitive>$0b10000000</primitive><operator>,</operator> <accessor>%dil</accessor><br></line>
+                            <line><keyword>call</keyword> <variable>__set</variable><br></line>
+                            <line><comment>/* qux = 25 -/- 12 */</comment><br></line>
+                        </code>
+                        <frame-indicator-container>
+                            <frame-indicator-box>
+                                <frame-indicator class="1">&bull;</frame-indicator>
+                                <frame-indicator class="2">&bull;</frame-indicator>
+                            </frame-indicator-box>
+                        </frame-indicator-container>
+                    </sample-box>
+                    <wires>
+                        <left-wire>
+                            <sheen></sheen>
+                        </left-wire>
+                        <bottom-wire>
+                            <sheen></sheen>
+                        </bottom-wire>
+                        <bottom-left-wire>
+                            <sheen>
+                                <oversheen></oversheen>
+                            </sheen>
+                        </bottom-left-wire>
+                    </wires>
+                </section>
+                <section class="1">
+                    <plug>
+                        <prong style="margin-left:8px">
+                            <sheen></sheen>
+                        </prong>
+                        <prong style="margin-left:32px">
+                            <sheen></sheen>
+                        </prong>
+                        <sheen></sheen>
+                    </plug>
+                    <heading>
+                        <word>
+                            <key>J</key>
+                            <key>E</key>
+                            <key>S</key>
+                            <key>S</key>
+                        </word>
+                        <word>
+                            <key>&nbsp;</key>
+                        </word>
+                        <word>
+                            <key>B</key>
+                            <key>U</key>
+                            <key>T</key>
+                        </word>
+                        <word>
+                            <key>&nbsp;</key>
+                        </word>
+                        <word>
+                            <key>L</key>
+                            <key>E</key>
+                            <key>S</key>
+                            <key>S</key>
+                        </word>
+                        <word>
+                            <key>&nbsp;</key>
+                        </word>
+                        <word>
+                            <key>O</key>
+                            <key>F</key>
+                        </word>
+                        <word>
+                            <key>&nbsp;</key>
+                        </word>
+                        <word>
+                            <key>A</key>
+                        </word>
+                        <word>
+                            <key>&nbsp;</key>
+                        </word>
+                        <word>
+                            <key>M</key>
+                            <key>E</key>
+                            <key>S</key>
+                            <key>S</key>
+                        </word>
+                    </heading>
+                    <section-content>
+                        <subheading><strong>Syntax Highlighting Extension</strong><text> - VSCode TypeScript</text></subheading> <br>
+                        <subheading class="timeframe">&emsp;August 2022 : December 2022</subheading> <br>
+                        <blurb>My most popular tool, JESS, but Less of a Mess, is a color coding VSCode extension meant for Sandia Labs' JESS (Java Expert Systems Shell). JESS is a very niche system, especially in this day and age, and my classmates really struggled with it, so I created the extension to help them. The extension offers both syntax highlighting and documentation hinting for all JESS builtins.</blurb> <br>
+                        &emsp;&emsp; <a href="https://marketplace.visualstudio.com/items?itemName=AndrewFox.jess-colors">Download Extension</a> &bull; <a href="https://github.com/AndrewFoxUUID/JESS_but_less_of_a_mess">View Github Project</a>
+                    </section-content>
+                    <sample-box class="1">
+                        <code class="1">
+                            <line><comment>/*</comment><br></line>
+                            <line><comment>** asks the user a question through the command line, returns a boolean or nil depending on the first character of the response</comment><br></line>
+                            <line><comment>*/</comment><br></line>
+                            <line><operator>(</operator><hover-box><keyword>deffunction</keyword><hover-content>
+                                <h3>(deffunction &lt;symbol&gt; (&lt;variable&gt;) &lt;expression&gt; [return])</h3>
+                                <p><strong>Arguments:</strong> The name of the deffunction (a symbol), a list of variable names as arguments, and any number of valid lines of JESS code</p>
+                                <p><strong>Returns:</strong> TRUE</p>
+                                <p>A deffunction is a function written in the Jess language. You can call deffunctions from the Jess prompt, from a rule, or from another deffunction.</p>
+                                <p>Example:</p>
+                                <code>
+                                    <line><operator>(</operator><keyword>deffunction</keyword> <variable>a</variable> <operator>(</operator><variable>?b</variable> <variable>?c</variable><operator>)</operator><br></line>
+                                    <line>&nbsp;&nbsp;&nbsp;&nbsp;<operator>(</operator><keyword>bind</keyword> <variable>?d</variable> <operator>(</operator><keyword>+</keyword> <variable>?b</variable> <variable>?c</variable><operator>))</operator><br></line>
+                                    <line>&nbsp;&nbsp;&nbsp;&nbsp;<operator>(</operator><keyword>return</keyword> <variable>?d</variable><operator>)</operator><br></line>
+                                    <line><operator>)</operator><br></line>
+                                </code>
+                            </hover-content></hover-box> <variable>ask</variable> <operator>(</operator><variable>?question</variable><operator>)</operator><br></line>
+                            <line>&nbsp;&nbsp;&nbsp;&nbsp;<operator>(</operator><hover-box><keyword>++</keyword><hover-content>
+                                <h3>(++ &lt;variable&gt;)</h3>
+                                <p><strong>Arguments:</strong> A variable</p>
+                                <p><strong>Returns:</strong> Number</p>
+                                <p>Adds one to the variable (which should contain a numeric value,) sets the variable to the new value, and returns the new value. Throws an exception if the argument is not a variable containing a numeric type. The type of the variable is preserved.</p>
+                            </hover-content></hover-box> <variable>?*question-counter*</variable><operator>)</operator><br></line>
+                            <line>&nbsp;&nbsp;&nbsp;&nbsp;<operator>(</operator><hover-box><keyword>if</keyword><hover-content>
+                                <h3>(if &lt;expression&gt; then &lt;action&gt;* [else &lt;action&gt;*])</h3>
+                                <p><strong>Arguments:</strong> A Boolean variable or function call returning Boolean, the symbol then, and any number of additional expressions; optionally followed by the symbol else and another list of expressions.</p>
+                                <p><strong>Returns:</strong> Varies</p>
+                                <p>Allows conditional execution of a group of actions. The boolean expression is evaluated. If it does not evaluate to <code-segment>FALSE</code-segment>, the first list of expressions is evaluated, and the return value is that returned by the last expression of that list. If it does evaluate to <code-segment>FALSE</code-segment>, and the optional second list of expressions is supplied, those expressions are evaluated and the value of the last is returned.</p>
+                            </hover-content></hover-box> <operator>(</operator><hover-box><keyword>=</keyword><hover-content>
+                                <h3>(= &lt;numeric-expression&gt; &lt;numeric-expression&gt;+)</h3>
+                                <p><strong>Arguments:</strong> Two or more numeric expressions or <code-segment>Comparable</code-segment> objects</p>
+                                <p><strong>Returns:</strong> Boolean</p>
+                                <p>Returns <code-segment>TRUE</code-segment> if the value of the first argument is equal in value to all subsequent arguments; otherwise, returns <code-segment>FALSE</code-segment>. The integer <code-segment>2</code-segment> and the float <code-segment>2.0</code-segment> are <code-segment>=</code-segment>, but not <code-segment>eq</code-segment>.</p>
+                            </hover-content></hover-box> <variable>?*question-counter*</variable> <variable>?*MAX_QUESTIONS*</variable><operator>)</operator> <keyword>then</keyword> <operator>(</operator><hover-box><keyword>assert</keyword><hover-content>
+                                <h3>(assert &lt;fact&gt;+)</h3>
+                                <p><strong>Arguments:</strong> One or more facts</p>
+                                <p><strong>Returns:</strong> A Fact, or <code-segment>FALSE</code-segment></p>
+                                <p>Adds all the facts to the working memory; returns the last fact asserted or <code-segment>FALSE</code-segment> if no facts were successfully asserted (for example, if all facts given are duplicates of existing facts.) A <code-segment>jess.JessEvent</code-segment> of type <code-segment>JessEvent.FACT</code-segment> will be sent if the event mask is set appropriately.</p>
+                                <p>It is important to remember that all pattern-matching happens during calls to <code-segment>assert</code-segment>, <code-segment>retract</code-segment>, <code-segment>modify</code-segment>, and related functions. Pattern-matching happens whether the engine is running or not.</p>
+                            </hover-content></hover-box> <operator>(</operator><variable>asked-max</variable><operator>)))</operator><br></line>
+                            <line>&nbsp;&nbsp;&nbsp;&nbsp;<operator>(</operator><hover-box><keyword>printout</keyword><hover-content>
+                                <h3>(printout &lt;router-identifier&gt; &lt;expression&gt;*)</h3>
+                                <p><strong>Arguments:</strong> A router identifier followed by zero or more expressions</p>
+                                <p>Sends unformatted output to the specified logical name. Prints its arguments to the named router, which must be open for output. No spaces are added between arguments. The special symbol <code-segment>crlf</code-segment> prints as a newline. The special router name <code-segment>t</code-segment> can be used to signify standard output.</p>
+                            </hover-content></hover-box> <accessor>t</accessor> <variable>?question</variable> <primitive>"? "</primitive><operator>)</operator><br></line>
+                            <line>&nbsp;&nbsp;&nbsp;&nbsp;<operator>(</operator><hover-box><keyword>bind</keyword><hover-content>
+                                <h3>(bind &lt;variable&gt; &lt;expression&gt;*)</h3>
+                                <p><strong>Arguments:</strong> A variable name and any value</p>
+                                <p><strong>Returns:</strong> Varies</p>
+                                <p>Binds a variable to a new value. Assigns the given value to the given variable, creating the variable if necessary. Returns the given value.</p>
+                                <p>Example:</p>
+                                <code>
+                                    <line><operator>(</operator><keyword>bind</keyword> <variable>?x</variable> <primitive>3</primitive><operator>)</operator><br></line>
+                                    <line><operator>-></operator> <primitive>3</primitive><br></line>
+                                    <line><variable>?x</variable><br></line>
+                                    <line><operator>-></operator> <primitive>3</primitive><br></line>
+                                </code>
+                            </hover-content></hover-box> <variable>?char</variable> <operator>(</operator><variable>getchar</variable><operator>))</operator><br></line>
+                            <line>&nbsp;&nbsp;&nbsp;&nbsp;<operator>(</operator><hover-box><keyword>return</keyword><hover-content>
+                                <h3>(return [&lt;expression&gt;])</h3>
+                                <p><strong>Arguments:</strong> An optional expression</p>
+                                <p><strong>Returns:</strong> Varies</p>
+                                <p>From a <code-segment>deffunction</code-segment>, returns the given value and exits the deffunction immediately. From the RHS of a <code-segment>defrule</code-segment>, terminates the rule's execution immediately and pops the current focus module from the focus stack. No argument should be given when return is called from the RHS of a rule.</p>
+                            </hover-content></hover-box> <operator>(</operator><hover-box><keyword>if</keyword><hover-content>
+                                <h3>(if &lt;expression&gt; then &lt;action&gt;* [else &lt;action&gt;*])</h3>
+                                <p><strong>Arguments:</strong> A Boolean variable or function call returning Boolean, the symbol then, and any number of additional expressions; optionally followed by the symbol else and another list of expressions.</p>
+                                <p><strong>Returns:</strong> Varies</p>
+                                <p>Allows conditional execution of a group of actions. The boolean expression is evaluated. If it does not evaluate to <code-segment>FALSE</code-segment>, the first list of expressions is evaluated, and the return value is that returned by the last expression of that list. If it does evaluate to <code-segment>FALSE</code-segment>, and the optional second list of expressions is supplied, those expressions are evaluated and the value of the last is returned.</p>
+                            </hover-content></hover-box> <operator>(</operator><hover-box><keyword>eq</keyword><hover-content>
+                                <h3>(eq &lt;expression&gt; &lt;expression&gt;+)</h3>
+                                <p><strong>Arguments:</strong> Two or more arbitrary arguments</p>
+                                <p><strong>Returns:</strong> Boolean</p>
+                                <p>Returns <code-segment>TRUE</code-segment> if the first argument is equal in type and value to all subsequent arguments. For strings, this means identical contents. Uses the Java <code-segment>Object.equals()</code-segment> function, so can be redefined. Note that the integer <code-segment>2</code-segment> and the floating-point number <code-segment>2.0</code-segment> are not <code-segment>eq</code-segment>, but they are <code-segment>eq*</code-segment> and <code-segment>=</code-segment>.</p>
+                                <p>While often used in procedural code, this function is only rarely used during pattern matching. Direct matching is preferable.</p>
+                            </hover-content></hover-box> <variable>?char</variable> <primitive>"y"</primitive><operator>)</operator> <keyword>then</keyword><br></line>
+                            <line>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<primitive>TRUE</primitive><br></line>
+                            <line>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<keyword>else</keyword> <operator>(</operator><hover-box><keyword>if</keyword><hover-content>
+                                <h3>(if &lt;expression&gt; then &lt;action&gt;* [else &lt;action&gt;*])</h3>
+                                <p><strong>Arguments:</strong> A Boolean variable or function call returning Boolean, the symbol then, and any number of additional expressions; optionally followed by the symbol else and another list of expressions.</p>
+                                <p><strong>Returns:</strong> Varies</p>
+                                <p>Allows conditional execution of a group of actions. The boolean expression is evaluated. If it does not evaluate to <code-segment>FALSE</code-segment>, the first list of expressions is evaluated, and the return value is that returned by the last expression of that list. If it does evaluate to <code-segment>FALSE</code-segment>, and the optional second list of expressions is supplied, those expressions are evaluated and the value of the last is returned.</p>
+                            </hover-content></hover-box> <operator>(</operator><hover-box><keyword>eq</keyword><hover-content>
+                                <h3>(eq &lt;expression&gt; &lt;expression&gt;+)</h3>
+                                <p><strong>Arguments:</strong> Two or more arbitrary arguments</p>
+                                <p><strong>Returns:</strong> Boolean</p>
+                                <p>Returns <code-segment>TRUE</code-segment> if the first argument is equal in type and value to all subsequent arguments. For strings, this means identical contents. Uses the Java <code-segment>Object.equals()</code-segment> function, so can be redefined. Note that the integer <code-segment>2</code-segment> and the floating-point number <code-segment>2.0</code-segment> are not <code-segment>eq</code-segment>, but they are <code-segment>eq*</code-segment> and <code-segment>=</code-segment>.</p>
+                                <p>While often used in procedural code, this function is only rarely used during pattern matching. Direct matching is preferable.</p>
+                            </hover-content></hover-box> <variable>?char</variable> <primitive>"n"</primitive><operator>)</operator> <keyword>then</keyword><br></line>
+                            <line>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<primitive>FALSE</primitive><br></line>
+                            <line>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<keyword>else</keyword><br></line>
+                            <line>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<primitive>nil</primitive><br></line>
+                            <line>&nbsp;&nbsp;&nbsp;&nbsp;<operator>)))</operator><br></line>
+                            <line><operator>)</operator> <comment>; def ask(question):</comment><br></line>
+                        </code>
+                    </sample-box>
+                    <wires>
+                        <left-wire>
+                            <sheen></sheen>
+                        </left-wire>
+                        <bottom-wire>
+                            <sheen></sheen>
+                        </bottom-wire>
+                        <bottom-left-wire>
+                            <sheen>
+                                <oversheen></oversheen>
+                            </sheen>
+                        </bottom-left-wire>
+                    </wires>
+                </section>
+                <section class="2">
+                    <plug>
+                        <prong style="margin-left:8px">
+                            <sheen></sheen>
+                        </prong>
+                        <prong style="margin-left:32px">
+                            <sheen></sheen>
+                        </prong>
+                        <sheen></sheen>
+                    </plug>
+                    <heading>
+                        <word>
+                            <key>O</key>
+                            <key>F</key>
+                        </word>
+                        <word>
+                            <key>&nbsp;</key>
+                        </word>
+                        <word>
+                            <key>S</key>
+                            <key>W</key>
+                            <key>O</key>
+                            <key>R</key>
+                            <key>D</key>
+                            <key>S</key>
+                        </word>
+                        <word>
+                            <key>&nbsp;</key>
+                        </word>
+                        <word>
+                            <key>A</key>
+                            <key>N</key>
+                            <key>D</key>
+                        </word>
+                        <word>
+                            <key>&nbsp;</key>
+                        </word>
+                        <word>
+                            <key>S</key>
+                            <key>P</key>
+                            <key>E</key>
+                            <key>L</key>
+                            <key>L</key>
+                            <key>S</key>
+                        </word>
+                    </heading>
+                    <section-content>
+                        <subheading><strong>Video Game</strong><text> - Godot</text></subheading> <br>
+                        <subheading class="timeframe">&emsp;March 2021 : December 2022</subheading> <br>
+                        <blurb>My first large scale project, Of Swords and Spells is a pixel art fantasy RPG built in the Godot game engine using its internal language GDscript.</blurb> <br>
+                        &emsp;&emsp; <a href="https://github.com/AndrewFoxUUID/OfSwordsAndSpells">View Github Project</a>
+                    </section-content>
+                    <sample-box class="3">
+                        <img class="1" src="ofswordsandspells1.png">
+                        <img class="2" src="ofswordsandspells2.png">
+                        <img class="3" src="ofswordsandspells3.png">
+                        <frame-indicator-container>
+                            <frame-indicator-box>
+                                <frame-indicator class="1">&bull;</frame-indicator>
+                                <frame-indicator class="2">&bull;</frame-indicator>
+                                <frame-indicator class="3">&bull;</frame-indicator>
+                            </frame-indicator-box>
+                        </frame-indicator-container>
+                    </sample-box>
+                    <wires>
+                        <left-wire>
+                            <sheen></sheen>
+                        </left-wire>
+                        <bottom-wire>
+                            <sheen></sheen>
+                        </bottom-wire>
+                        <bottom-left-wire>
+                            <sheen>
+                                <oversheen></oversheen>
+                            </sheen>
+                        </bottom-left-wire>
+                    </wires>
+                </section>
+                <section class="3">
+                    <plug>
+                        <prong style="margin-left:8px">
+                            <sheen></sheen>
+                        </prong>
+                        <prong style="margin-left:32px">
+                            <sheen></sheen>
+                        </prong>
+                        <sheen></sheen>
+                    </plug>
+                    <heading>
+                        <word>
+                            <key>J</key>
+                            <key>A</key>
+                            <key>V</key>
+                            <key>A</key>
+                        </word>
+                        <word>
+                            <key>&nbsp;</key>
+                        </word>
+                        <word>
+                            <key>C</key>
+                            <key>I</key>
+                            <key>T</key>
+                            <key>Y</key>
+                        </word>
+                    </heading>
+                    <section-content>
+                        <subheading><strong>Educational IDE</strong><text> - Python Pygame</text></subheading> <br>
+                        <subheading class="timeframe">&emsp;October 2021 : January 2022</subheading> <br>
+                        <blurb>Constructed in my high school's Compilers and Interpreters class to replace an ancient piece of software called Java Town. Java City has a builtin editor for Java and two modes for running it: it can just execute the program or it can go through step by step so that the user can see what is happening, which is especially useful for learning recursion. Java City also provides a visualization of the stack and heap so that new developers can visualize how those are manipulated by their code.</blurb> <br>
+                        &emsp;&emsp; <a href="https://github.com/AndrewFoxUUID/JavaCity">View Github Project</a>
+                    </section-content>
+                    <sample-box class="1">
+                        <img class="1" src="javacity.png" style="border-radius: 6px;margin-bottom: -10px;">
+                    </sample-box>
+                    <wires>
+                        <left-wire>
+                            <sheen></sheen>
+                        </left-wire>
+                        <bottom-wire>
+                            <sheen></sheen>
+                        </bottom-wire>
+                        <bottom-left-wire>
+                            <sheen>
+                                <oversheen></oversheen>
+                            </sheen>
+                        </bottom-left-wire>
+                    </wires>
+                </section>
+                <section class="4">
+                    <plug>
+                        <prong style="margin-left:8px">
+                            <sheen></sheen>
+                        </prong>
+                        <prong style="margin-left:32px">
+                            <sheen></sheen>
+                        </prong>
+                        <sheen></sheen>
+                    </plug>
+                    <heading>
+                        <word>
+                            <key>P</key>
+                            <key>H</key>
+                            <key>Y</key>
+                            <key>S</key>
+                            <key>I</key>
+                            <key>C</key>
+                            <key>S</key>
+                        </word>
+                        <word>
+                            <key>&nbsp;</key>
+                        </word>
+                        <word>
+                            <key>S</key>
+                            <key>Y</key>
+                            <key>S</key>
+                            <key>T</key>
+                            <key>E</key>
+                            <key>M</key>
+                        </word>
+                    </heading>
+                    <section-content>
+                        <subheading><strong>Apple Application</strong><text> - Swift</text></subheading> <br>
+                        <subheading class="timeframe">&emsp;September 2022 : December 2022</subheading> <br>
+                        <blurb>Created for my high school's modern physics class to help visualize its complexities. I implemented an inference engine in SWIFT to be used under the hood of the application, though I never completed its integration into the actual system.</blurb> <br>
+                        &emsp;&emsp; <a href="https://github.com/AndrewFoxUUID/PhysicsSystem">View Github Project</a>
+                    </section-content>
+                    <sample-box class="2">
+                        <img class="1" src="physicssystem1.png">
+                        <img class="2" src="physicssystem2.png">
+                        <frame-indicator-container>
+                            <frame-indicator-box>
+                                <frame-indicator class="1">&bull;</frame-indicator>
+                                <frame-indicator class="2">&bull;</frame-indicator>
+                            </frame-indicator-box>
+                        </frame-indicator-container>
+                    </sample-box>
+                    <wires>
+                        <left-wire>
+                            <sheen></sheen>
+                        </left-wire>
+                        <bottom-wire>
+                            <sheen></sheen>
+                        </bottom-wire>
+                        <bottom-left-wire>
+                            <sheen>
+                                <oversheen></oversheen>
+                            </sheen>
+                        </bottom-left-wire>
+                    </wires>
+                </section>
+            </section-container>
+            <test-spacer style="height:10000px;display:block"></test-spacer>
+        </content>
+
+        <div id="first-stage-indicator" style="display:none"></div>
+        <div id="second-stage-indicator" style="display:none"></div>
+        <div id="third-stage-indicator"></div>
+    </body>
+</html>
