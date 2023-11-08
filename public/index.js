@@ -147,11 +147,6 @@ function alignSections() {
     for (var i = 0; i < parseInt($("section-container").attr("class")); i++) {
         section_heights.push($("section." + i).height() + 2*parseInt($("section." + i).css("padding")) + parseInt($("section." + i).css("margin-top")) + (section_heights.length > 0 ? section_heights[section_heights.length-1] : 0));
         $("section." + i + " > wires").height($("section." + i).height() + 40);
-        /*if ($("#first-stage-indicator").is(":visible")) {
-            $("section." + i + " > wires").css("margin-top", -$("section." + i + " > heading").height() - 20);
-        } else {
-            $("section." + i + " > wires").css("margin-top", -$("section." + i + " > heading").height() - $("section." + i + " > section-content").height() - 20);
-        }*/
         $("section." + i + " > sample-box > code").css("max-height", $("section." + i + " > section-content").height() - ($("section." + i + " > sample-box > frame-indicator-container").length ? 45 : 0));
     }
 }
@@ -171,43 +166,41 @@ function contentScroll(e) {
         delta = e.originalEvent.deltaY;
     }
 
-    if ($("#first-stage-indicator").is(":visible")) {
-        if (e.originalEvent instanceof TouchEvent || !$("sample-box:hover").length) {
-            e.preventDefault();
-            if (delta > 0 && !animation_running) { // scroll up
-                if (cur_section > 0) {
+    if (e.originalEvent instanceof TouchEvent || !$("sample-box:hover").length) {
+        e.preventDefault();
+        if (delta > 0 && !animation_running) { // scroll up
+            if (cur_section > 0) {
+                encryptSection(cur_section);
+                cur_section -= 1;
+                animation_running = true;
+                $("content").animate({
+                    scrollTop: section_heights[cur_section] - 21
+                }, 0, function() {
+                    setTimeout(function() {
+                        setTimeout(function() {
+                            animation_running = false;
+                        }, 500);
+                        decryptSection(cur_section);
+                    }, 500);
+                })
+            }
+        } else if (delta < 0 && !animation_running) { // scroll down
+            if (cur_section < parseInt($("content > section-container").attr("class")) - 1) {
+                if (cur_section >= 0) {
                     encryptSection(cur_section);
-                    cur_section -= 1;
-                    animation_running = true;
-                    $("content").animate({
-                        scrollTop: section_heights[cur_section] - 21
-                    }, 0, function() {
-                        setTimeout(function() {
-                            setTimeout(function() {
-                                animation_running = false;
-                            }, 500);
-                            decryptSection(cur_section);
-                        }, 500);
-                    })
                 }
-            } else if (delta < 0 && !animation_running) { // scroll down
-                if (cur_section < parseInt($("content > section-container").attr("class")) - 1) {
-                    if (cur_section >= 0) {
-                        encryptSection(cur_section);
-                    }
-                    cur_section += 1;
-                    animation_running = true;
-                    $("content").animate({
-                        scrollTop: section_heights[cur_section] - 21
-                    }, 0, function() {
+                cur_section += 1;
+                animation_running = true;
+                $("content").animate({
+                    scrollTop: section_heights[cur_section] - 21
+                }, 0, function() {
+                    setTimeout(function() {
                         setTimeout(function() {
-                            setTimeout(function() {
-                                animation_running = false;
-                            }, 500);
-                            decryptSection(cur_section);
+                            animation_running = false;
                         }, 500);
-                    })
-                }
+                        decryptSection(cur_section);
+                    }, 500);
+                })
             }
         }
     }
@@ -242,7 +235,7 @@ $(document).ready(function() {
     $("header, border").bind("wheel", borderScroll);
     $("header, border").bind("touchmove", borderScroll);
     $("content").bind("wheel", contentScroll);
-    $("content").bind("touchstart", function(e) {touch_start = e.originalEvent.touches[0].clientY})
+    $("content").bind("touchstart", function(e) {touch_start = e.originalEvent.touches[0].clientY;})
     $("content").bind("touchmove", contentScroll);
     $("sample-box > frame-indicator-container").click(function() {
         var next = false;

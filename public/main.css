@@ -65,6 +65,11 @@ header {
     z-index: 2;
 }
 
+header > *:not(sheen, oversheen) {
+    z-index: 1;
+    position: relative;
+}
+
 sheen {
     background-color: rgba(255, 255, 255, 0.4);
     pointer-events: none;
@@ -82,15 +87,17 @@ header > sheen.left {
     margin-left: -35%;
 }
 
-header > sheen.middle {
-    height: 7.5%;
-    margin-left: 30%;
-    top: -15%;
-}
-
 header > sheen.right {
     height: 75%;
     margin-left: 30%;
+}
+
+header > sheen > oversheen {
+    height: 3%;
+    width: 100%;
+    margin-top: 1%;
+    display: block;
+    background-color: #A1662F;
 }
 
 key {
@@ -433,21 +440,7 @@ header-spacer {
     display: block;
 }
 
-@media only screen and (max-width: 939px) {
-    .hide-below-940 {
-        display: none;
-    }
-}
-
 @media only screen and (min-width: 940px) {
-    #first-stage-indicator {
-        display: block !important;
-    }
-
-    .hide-above-940 {
-        display: none;
-    }
-
     border {
         background-color: #A1662F;
         width: 2%;
@@ -485,10 +478,6 @@ header-spacer {
 }
 
 @media only screen and (min-width: 645px) {
-    #second-stage-indicator {
-        display: block !important;
-    }
-
     key {
         color: white;
         background-color: black;
@@ -502,7 +491,6 @@ header-spacer {
         margin-bottom: 4px;
         text-align: center;
         position: relative;
-        z-index: 1;
     }
     
     large-text > key {
