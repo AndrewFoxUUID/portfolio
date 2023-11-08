@@ -157,7 +157,7 @@ function borderScroll(e) {
 
 function contentScroll(e) {
     var delta;
-    if (e.originalEvent instanceof TouchEvent) {
+    if (window.TouchEvent && e.originalEvent instanceof TouchEvent) {
         delta = e.originalEvent.touches[0].pageY;
         if (delta < touch_start) {
             delta *= -1;
@@ -166,7 +166,7 @@ function contentScroll(e) {
         delta = e.originalEvent.deltaY;
     }
 
-    if (e.originalEvent instanceof TouchEvent || !$("sample-box:hover").length) {
+    if ((window.TouchEvent && e.originalEvent instanceof TouchEvent) || !$("sample-box:hover").length) {
         e.preventDefault();
         if (delta > 0 && !animation_running) { // scroll up
             if (cur_section > 0) {
