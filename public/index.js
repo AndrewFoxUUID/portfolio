@@ -140,8 +140,8 @@ function decryptSection(section) {
 }
 
 function alignSections() {
-    $("header-spacer").height($("header").height() + 40);
-    $("plug-board").css("top", $("header").height() + 22);
+    $("header-spacer").height(parseFloat($("header").height()) + parseFloat($("header").css("padding-top")) + parseFloat($("header").css("padding-bottom")));
+    $("plug-board").css("top", parseFloat($("header").height()) + parseFloat($("header").css("padding-bottom")) + 2);
     $("plug-board").css("left", parseFloat($("section.0").css("margin-left")) + (parseFloat($("border").css("width")) === 0.0 ? parseFloat($("content").css("margin-left")) : parseFloat($("border").css("width"))) - 16);
     section_heights = [75];
     for (var i = 0; i < parseInt($("section-container").attr("class")); i++) {

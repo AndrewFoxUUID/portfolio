@@ -54,12 +54,13 @@ body {
 
 header {
     background-color: #A1662F;
-    text-align: center;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
     position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    padding: 20px;
     overflow: hidden;
     box-shadow: 0 2px 6px #523418;
     z-index: 2;
@@ -98,6 +99,14 @@ header > sheen > oversheen {
     margin-top: 1%;
     display: block;
     background-color: #A1662F;
+}
+
+header > medium-text {
+    font-size: 1px;
+}
+
+header > word {
+    float: right;
 }
 
 key {
@@ -440,6 +449,27 @@ header-spacer {
     display: block;
 }
 
+footer {
+    position: sticky;
+    background-color: black;
+    bottom: 0;
+}
+
+footer > left-button, footer > right-button {
+    background-color: darkslategray;
+    width: 49%;
+    margin: 0.5%;
+    color: white;
+}
+
+footer > left-button {
+    float: left;
+}
+
+footer > right-button {
+    float: right;
+}
+
 @media only screen and (min-width: 940px) {
     border {
         background-color: #A1662F;
@@ -505,5 +535,18 @@ header-spacer {
     key:hover {
         color: orange;
         box-shadow: 0 2px 6px black;
+    }
+
+    header {
+        text-align: center;
+        padding: 20px;
+    }
+
+    header > medium-text {
+        font-size: 1em;
+    }
+
+    header > word {
+        float: none;
     }
 }
