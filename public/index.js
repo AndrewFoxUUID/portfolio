@@ -261,6 +261,7 @@ $(document).ready(function() {
     });
 
     alignSections();
+    alignSections();
 });
 
 $(window).resize(alignSections);
