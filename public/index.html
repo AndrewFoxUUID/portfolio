@@ -77,8 +77,78 @@
         </border>
         <content>
             <header-spacer></header-spacer>
-            <section-container class="5">
+            <section-container class="6">
                 <section class="0">
+                    <plug>
+                        <prong style="margin-left:8px">
+                            <sheen></sheen>
+                        </prong>
+                        <prong style="margin-left:32px">
+                            <sheen></sheen>
+                        </prong>
+                        <sheen></sheen>
+                    </plug>
+                    <heading>
+                        <word>
+                            <key>C</key>
+                            <key>R</key>
+                            <key>Y</key>
+                            <key>P</key>
+                            <key>T</key>
+                            <key>O</key>
+                            <key>N</key>
+                            <key>O</key>
+                            <key>M</key>
+                            <key>I</key>
+                            <key>C</key>
+                            <key>O</key>
+                            <key>N</key>
+                        </word>
+                    </heading>
+                    <section-content>
+                        <subheading><strong>Cryptographic Toolchain</strong><text> - Pure C and Bash</text></subheading> <br>
+                        <subheading class="timeframe">&emsp;August 2024 : Present</subheading> <br>
+                        <blurb>This project is meant for research purposes into cryptographic and networking primitives, particularly as seen in OpenSSL. Large modules of the project are dedicated to OpenSSL features such as ASN.1 and RSA encryption and signatures.</blurb>
+                    </section-content>
+                    <sample-box class="2">
+                        <code class="1">
+                            <line style="border:none;padding-bottom:1rem"><comment>OID Database Excerpt</comment><br></line>
+                            ┣╸1 - iso<br>
+                            ┃&nbsp;┣╸2 - member-body<br>
+                            ┃&nbsp;┃&nbsp;┗╸840 - us<br>
+                            ┃&nbsp;┃&nbsp;&nbsp;&nbsp;┣╸113549 - rsadsi<br>
+                            ┃&nbsp;┃&nbsp;&nbsp;&nbsp;┃&nbsp;┗╸1 - pkcs<br>
+                            ┃&nbsp;┃&nbsp;&nbsp;&nbsp;┃&nbsp;&nbsp;&nbsp;┣╸1 - pkcs-1<br>
+                            ┃&nbsp;┃&nbsp;&nbsp;&nbsp;┃&nbsp;&nbsp;&nbsp;┃&nbsp;┗╸1 - rsaEncryption<br>
+                            ┃&nbsp;┃&nbsp;&nbsp;&nbsp;┃&nbsp;&nbsp;&nbsp;┗╸5 - pkcs-5<br>
+                            ┃&nbsp;┃&nbsp;&nbsp;&nbsp;┃&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┗╸12 - pBKDF2<br>
+                            ┃&nbsp;┃&nbsp;&nbsp;&nbsp;┗╸10040 - x9-57<br>
+                            ┃&nbsp;┃&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┗╸4 - x9algorithm<br>
+                            ┃&nbsp;┃&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;┗╸1 - dsa<br>
+                        </code>
+                        <img class="2" src="map.png">
+                        <frame-indicator-container>
+                            <frame-indicator-box>
+                                <frame-indicator class="1">&bull;</frame-indicator>
+                                <frame-indicator class="2">&bull;</frame-indicator>
+                            </frame-indicator-box>
+                        </frame-indicator-container>
+                    </sample-box>
+                    <wires>
+                        <left-wire>
+                            <sheen></sheen>
+                        </left-wire>
+                        <bottom-wire>
+                            <sheen></sheen>
+                        </bottom-wire>
+                        <bottom-left-wire>
+                            <sheen>
+                                <oversheen></oversheen>
+                            </sheen>
+                        </bottom-left-wire>
+                    </wires>
+                </section>
+                <section class="1">
                     <plug>
                         <prong style="margin-left:8px">
                             <sheen></sheen>
@@ -105,7 +175,7 @@
                     </heading>
                     <section-content>
                         <subheading><strong>Language</strong><text> - C and AT&T x86-64 Assembly (Apple Native)</text></subheading> <br>
-                        <subheading class="timeframe">&emsp;January 2023 : Present</subheading> <br>
+                        <subheading class="timeframe">&emsp;January 2023 : July 2024</subheading> <br>
                         <blurb>LoricScript is a language entirely of my own design meant to become my primary language for future projects. The compiler is built in pure C with nothing beyond the standard libraries and the internal functions are implemented in the target assembly. The compiler is compiled using the Apple toolchain (Clang and LLDB) as opposed to the more common GNU toolchain (GCC and GDB). I am also building an accompanying unit testing framework, also out of C, to verify the integrity of the language's internal functions.</blurb>
                     </section-content>
                     <sample-box class="2">
@@ -232,7 +302,7 @@
                         </bottom-left-wire>
                     </wires>
                 </section>
-                <section class="1">
+                <section class="2">
                     <plug>
                         <prong style="margin-left:8px">
                             <sheen></sheen>
@@ -405,7 +475,7 @@
                         </bottom-left-wire>
                     </wires>
                 </section>
-                <section class="2">
+                <section class="3">
                     <plug>
                         <prong style="margin-left:8px">
                             <sheen></sheen>
@@ -483,7 +553,7 @@
                         </bottom-left-wire>
                     </wires>
                 </section>
-                <section class="3">
+                <section class="4">
                     <plug>
                         <prong style="margin-left:8px">
                             <sheen></sheen>
@@ -533,7 +603,7 @@
                         </bottom-left-wire>
                     </wires>
                 </section>
-                <section class="4">
+                <section class="5">
                     <plug>
                         <prong style="margin-left:8px">
                             <sheen></sheen>

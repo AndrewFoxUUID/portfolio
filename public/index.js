@@ -258,10 +258,11 @@ $(document).ready(function() {
     });
     $("key").click(function() {
         console.log(encryptChar($(this).text()));
-    })
+    });
 
-    alignSections();
     alignSections();
 });
 
 $(window).resize(alignSections);
+$(window).focus(alignSections);
+$(window).click(alignSections);
